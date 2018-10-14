@@ -5,6 +5,7 @@
 #
 # Requires Python >= 3.2 and Ledger >= 3.0
 
+from __future__ import print_function
 import argparse
 import csv
 import io
