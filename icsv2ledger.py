@@ -704,7 +704,7 @@ def read_mapping_file(map_file):
         for row in map_reader:
             if len(row) > 1:
                 pattern = row[0].strip()
-                payee = row[1].strip()
+                payee = re.sub('\n', '', row[1].strip())
                 account = row[2].strip()
                 tags = row[3:]
                 if pattern.startswith('/') and pattern.endswith('/'):
@@ -841,7 +841,7 @@ def main():
         possible_tags.update(set(m[3]))
 
     def get_payee_and_account(entry):
-        payee = entry.desc
+        payee = re.sub('\n', '', entry.desc)
         account = options.default_expense
         tags = []
         found = False
@@ -860,7 +860,7 @@ def main():
                     payee = m[1]
                     # perform regexp substitution if captures were used
                     if match.groups():
-                        payee = m[0].sub(m[1],entry.desc)
+                        payee = m[0].sub(m[1],re.sub('\n', '', entry.desc))
                     account, tags = m[2], m[3]
                     found = True
 
