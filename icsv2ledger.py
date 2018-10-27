@@ -555,6 +555,9 @@ class Entry:
         Return a formatted journal entry recording this Entry against
         the specified Ledger account
         """
+        if payee == '' and account == '':
+            return ''
+
         template = (self.transaction_template
                     if self.transaction_template else DEFAULT_TEMPLATE)
         uuid_regex = re.compile(r"UUID:", re.IGNORECASE)
@@ -916,6 +919,8 @@ def main():
         if in_file.name == '<stdin>':
             reset_stdin()
         for line in  process_csv_lines(csv_lines):
+            if line == '':
+                continue
             print(line, sep='\n', file=out_file)
             out_file.flush()
 
