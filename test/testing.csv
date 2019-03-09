@@ -1,0 +1,22 @@
+"Volksbank Irgendwo EG"
+
+"Umsatzanzeige"
+
+"BLZ:";"123456789";;"Datum:";"14.10.2018"
+"Konto:";"333444555";;"Uhrzeit:";"23:15:44"
+"Abfrage von:";"Max Mustermann";;"Kontoinhaber:";"Max Mustermann"
+
+"Zeitraum:";"Alle Umsätze";"von:";;"bis:";
+"Betrag in EUR:";;"von:";" ";"bis:";" "
+"Sortiert nach:";"Buchungstag";"absteigend"
+
+"Buchungstag";"Valuta";"Auftraggeber/Zahlungsempfänger";"Empfänger/Zahlungspflichtiger";"Konto-Nr.";"IBAN";"BLZ";"BIC";"Vorgang/Verwendungszweck";"Kundenreferenz";"Währung";"Umsatz";" "
+"21.08.2018";"21.08.2018";"/ASDF/12345789012345678900/0/1111";"IRGENDWIE IRGENDWO GMBH";;;;;"Basislastschrift
+12341234123412341234
+ABD1234 18.08 16.01 
+0 EREF: 7890789078907890780
+2345234523452345 MREF: 7890
+345634563456345634 CRED: DE
+34AA123412341234 IBAN: DE59
+123456789123456789 BIC: ABD
+DEFGH";;"EUR";"17,80";"S"
