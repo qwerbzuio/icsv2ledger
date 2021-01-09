@@ -1,4 +1,8 @@
+import sys
 from setuptools import setup
+
+# extra check to avoid accidentally running this script lower python versions
+assert sys.version_info >= (3, 2)
 
 setup(
     name='icsv2ledger',
