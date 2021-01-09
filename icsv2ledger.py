@@ -889,10 +889,10 @@ def main():
                     tags = value
 
         if not found or (found and modified):
-            value = 'Y'
+            value = 'N'
             # if prompt-add-mappings option passed then request confirmation before adding to mapping file
             if options.prompt_add_mappings:
-                yn_response = prompt_for_value('Append to mapping file?', possible_yesno, 'N')
+                yn_response = prompt_for_value('Append to mapping file?', ['N','Y'], 'N')
                 if yn_response:
                     value = yn_response
             if value.upper().strip() not in ('N','NO'):
